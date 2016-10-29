@@ -9,6 +9,7 @@
     "object-curly-spacing": [ "error", "always" ],
     "computed-property-spacing": [ "error", "always" ],
     "quotes": [ "error", "single", "avoid-escape" ],
-    "complexity": [ "warn", 5 ]
+    "complexity": [ "warn", 5 ],
+    "no-unused-vars": [ "warn" ]
   }
 }
