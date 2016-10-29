@@ -4,7 +4,8 @@
   "description": "Bidirectional syncing of Github Issues & Trello Cards",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "eslint": "eslint app"
   },
   "repository": {
     "type": "git",

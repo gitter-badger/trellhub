@@ -1,0 +1,57 @@
+var config = {};
+var appConst = {
+    // GITHUB CONSTS
+    GITHUB_AUTH_BASIC: 'basic',
+    GITHUB_AUTH_OAUTH: 'oauth',
+    GITHUB_AUTH_TOKEN: 'token'
+};
+
+/****************
+# Trello Config #
+****************/
+var trello = {};
+
+/* Authentication */
+trello.key = "TRELLO_API_KEY";
+trello.token = "TRELLO_API_TOKEN";
+config.trello = trello;
+
+/****************
+# GitHub Config #
+****************/
+var github = {};
+
+/* Configuration */
+// Enable|Disable Debugging
+github.debug = false;
+// Connection protocol (HTTP|HTTPS)
+github.protocol = 'https';
+// GitHub API URL (default: api.github.com)
+github.host = 'api.github.com';
+// API Path Prefix (optional, usually for GitHub Enterprise versions)
+github.pathPrefix = null;
+// Custom request headers
+github.headers = null;
+// Request timeout (in ms)
+github.timeout = 5000;
+
+/* Authentication (pick 1!) */
+// Basic [GitHub]
+github.authType = appConst.GITHUB_AUTH_BASIC;
+github.username = 'GITHUB_USERNAME';
+github.password = 'GITHUB_PASSWORD';
+
+// OAuth [GitHub]
+// github.authType = appConst.GITHUB_AUTH_OAUTH;
+// github.token = 'GITHUB_OAUTH_TOKEN';
+// github.key = 'GITHUB_OAUTH_KEY';       // Optional if using token-only
+// github.secret = 'GITHUB_OAUTH_SECRET'; // Optional if using token-only
+
+// // User token [GitHub]
+// github.authType = appConst.GITHUB_AUTH_TOKEN;
+// github.token = 'GITHUB_API_TOKEN';
+// config.github = github;
+
+// Ship 'em!
+exports.config = config;
+exports.appConst = appConst;
