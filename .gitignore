@@ -1,5 +1,6 @@
 # App files
-config.js
+config/config.js
+config/mappings.js
 
 # Logs
 logs
@@ -26,3 +27,6 @@ node_modules/*
 
 # Output of 'npm pack'
 *.tgz
+
+# Linting
+.eslintrc*
