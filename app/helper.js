@@ -51,5 +51,7 @@ helpers.validateConfig = function validateConfig(config) {
   }
 
   // check mappings
+}
 
+// Ship `em!
 exports.helpers = helpers;
