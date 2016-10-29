@@ -1,13 +1,14 @@
 /**
  * @summary   Helper functions for the node app
  */
+const _ = require('lodash');
+
 const helpers = {};
 
 /**
  * Verify config:
  *  - GitHub/Trello auth credentials exist
  *  - No conflicting auth method/credential pairs
- *  - Proper mappings are in place for (n+1) sync jobs
  *
  * @param {string} str The string to repeat.
  * @param {number} [times=1] How many times to repeat the string.
@@ -15,43 +16,54 @@ const helpers = {};
 */
 helpers.validateConfig = function validateConfig(config) {
   // check credentials
-  let githubAuthMethod = config.get('github:config:authMethod');
-  let trelloAuthMethod = config.get('trello:config:authMethod');
+  const githubAuthMethod = config.get('github:config:authMethod');
+  const trelloAuthMethod = config.get('trello:config:authMethod');
 
-  if (_.isUndefined(githubAuthMethod)) throw "Undefined authentication method [GitHub]";
-  if (_.isUndefined(trelloAuthMethod)) throw "Undefined authentication method [Trello]";
+  if (_.isUndefined(githubAuthMethod)) throw new Error('Undefined authentication method [GitHub]');
+  if (_.isUndefined(trelloAuthMethod)) throw new Error('Undefined authentication method [Trello]');
 
-  var validateGithub = function (type) {
+  const validateGithub = function validateGithub(type) {
     switch (type) {
-      case 'basic':
-        return !(_.isUndefined(config.get('github:auth:basic:username') ||
+    case 'basic':
+      return !(_.isUndefined(config.get('github:auth:basic:username') ||
                 _.isUndefined(config.get('github:auth:basic:password'))));
-      case 'oauth':
-        return !(_.isUndefined(config.get('github:auth:oauth:key')) ||
+    case 'oauth':
+      return !(_.isUndefined(config.get('github:auth:oauth:key')) ||
                 _.isUndefined(config.get('github:auth:oauth:secret')));
-      case 'token':
-        return !(_.isUndefined(config.get('github:auth:token:token')));
-      default:
-        throw "Invalid authentication method [GitHub]";
+    case 'token':
+      return !(_.isUndefined(config.get('github:auth:token:token')));
+    default:
+      throw new Error('Invalid authentication method [GitHub]');
     }
-  }.bind(config);
+  };
 
-  var validateTrello = function (type) {
+  const validateTrello = function validateTrello(type) {
     switch (type) {
-      case 'basic':
-        return !(_.isUndefined(config.get('trello:auth:key')) ||
+    case 'basic':
+      return !(_.isUndefined(config.get('trello:auth:key')) ||
                 _.isUndefined(config.get('trello:auth:token')));
-      default:
-        throw "Invalid authentication method [Trello]";
+    default:
+      throw new Error('Invalid authentication method [Trello]');
     }
-  }.bind(config);
+  };
 
   if (!validateGithub(githubAuthMethod) || !validateTrello(trelloAuthMethod)) {
-    throw "Invalid authentication config. Please verify you have filled out all values for your selected auth method in config.json";
+    throw new Error('Invalid authentication config. Please verify you have filled out all values for your selected auth method in config.json');
   }
+};
 
-  // check mappings
-}
+/**
+ * Verify mappings:
+ *  - Repo+board pairs exist properly
+ *  - Validate mapping configuration values
+ *
+ * @param {string} str The string to repeat.
+ * @param {number} [times=1] How many times to repeat the string.
+ * @returns {string}
+*/
+helpers.validateMappings = function validateMappings(mappings) {
+  return true;
+};
 
 // Ship `em!
 exports.helpers = helpers;
