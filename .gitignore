@@ -1,6 +1,6 @@
 # App files
-config/config.js
-config/mappings.js
+config/config.json
+config/mappings.json
 
 # Logs
 logs

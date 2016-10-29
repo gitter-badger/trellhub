@@ -1,0 +1,51 @@
+{
+  "github": {
+    /* Configuration */
+    "config": {
+      // Enable|Disable debugging
+      "debug": false,
+      // Connection protocol (http|https)
+      "protocol": "https",
+      // GitHub API url (default: api.github.com)
+      "host": "api.github.com",
+      // API path prefix (optional, usually for GitHub Enterprise versions)
+      "pathPrefix": null,
+      // Custom HTTP request headers (e.g. custom user-agent)
+      "headers": null,
+      // HTTP request timeout (in ms)
+      "timeout": 5000,
+      // API Authentication method (basic|oauth|token)
+      "authMethod": "basic"
+    },
+    /* Authentication */
+    "auth": {
+      "basic": {
+        "username": "GITHUB_USERNAME",
+        "password": "GITHUB_PASSWORD"
+      },
+      "oauth": {
+        "key": "OAUTH_KEY",
+        "secret": "OAUTH_SECRET"
+      },
+      "token": {
+        "token": "GITHUB_API_TOKEN"
+      }
+    }
+  },
+  /****************
+  # Trello Config #
+  ****************/
+  "trello": {
+    /* Configuration */
+    "config": {
+      "authMethod": "basic"
+    },
+    /* Authentication */
+    "auth": {
+      "basic": {
+        "key": "TRELLO_API_KEY",
+        "token": "TRELLO_API_TOKEN"
+      }
+    }
+  }
+}
