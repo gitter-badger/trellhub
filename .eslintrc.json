@@ -1,0 +1,14 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "indent": [ "error", 2 ],
+        "array-bracket-spacing": [ "error", "always" ],
+        "object-curly-spacing": [ "error", "always" ],
+        "computed-property-spacing": [ "error", "always" ],
+        "quotes": [ "error", "single", "avoid-escape" ],
+        "complexity": [ "warn", 5 ]
+    }
+}
