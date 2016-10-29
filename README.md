@@ -12,5 +12,10 @@ written in NodeJS.
 
 ## Usage
 
+## Thanks
+This project would not be possible without the help of
+- github.com/adunkman/node-trello
+- github.com/mikedeboer/node-github
+
 ## Contributing
 I'll take all the help I can get!

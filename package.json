@@ -1,0 +1,24 @@
+{
+  "name": "trellhub",
+  "version": "1.0.0",
+  "description": "Bidirectional syncing of Github Issues & Trello Cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdavenport/trellhub.git"
+  },
+  "author": "Matt Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattdavenport/trellhub/issues"
+  },
+  "homepage": "https://github.com/mattdavenport/trellhub#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "github": "^6.0.1",
+    "node-trello": "^1.1.2"
+  }
+}

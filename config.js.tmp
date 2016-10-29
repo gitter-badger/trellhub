@@ -1,0 +1,15 @@
+var config = {};
+
+#################
+# Trello Config #
+#################
+config.trello.key = "YOUR_API_KEY";
+config.trello.token = "TOKEN"
+
+#################
+# GitHub Config #
+#################
+config.github.key = "YOUR_API_KEY";
+config.github.token = "TOKEN"
+
+module.exports = config;
