@@ -1,4 +1,6 @@
 # TrellHub
+
+[![Join the chat at https://gitter.im/trellhub/Lobby](https://badges.gitter.im/trellhub/Lobby.svg)](https://gitter.im/trellhub/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/mattdavenport/trellhub.svg?branch=master)](https://travis-ci.org/mattdavenport/trellhub)
 **Description**: A bidirectional syncing tool for Github Issues & Trello Cards
 written in NodeJS.
