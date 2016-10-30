@@ -1,4 +1,5 @@
 # TrellHub
+[![Build Status](https://travis-ci.org/mattdavenport/trellhub.svg?branch=master)](https://travis-ci.org/mattdavenport/trellhub)
 **Description**: A bidirectional syncing tool for Github Issues & Trello Cards
 written in NodeJS.
 
@@ -16,6 +17,3 @@ written in NodeJS.
 This project would not be possible without the help of
 - github.com/adunkman/node-trello
 - github.com/mikedeboer/node-github
-
-## Contributing
-I'll take all the help I can get!
