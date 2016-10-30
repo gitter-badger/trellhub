@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./index.js",
     "lintSoft": "eslint .",
-    "lintHard": "eslint --fix ."
+    "lintHard": "eslint --fix .",
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
